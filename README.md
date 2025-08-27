@@ -1,12 +1,5 @@
-# schema
+
 A script to infer the json schema of a Kafka topic
-
-Depends on kafka python
-
-```bash
-pip install kafka-python
-```
-
 
 # How to Use
 
@@ -45,12 +38,11 @@ The output will be a JSON object representing the inferred schema.
 
 The script includes optional arguments to customize its behavior.
 
-Argument	Shorthand	Description	Default Value
---topic	None	The name of the Kafka topic to inspect. (Required)	None
---brokers	-b	A list of Kafka bootstrap servers to connect to.	['localhost:9092']
---num-messages	-n	The number of messages to sample for schema inference. A larger sample may be more accurate.	500
-
-Export to Sheets
+| Argument | Shorthand | Description | Default Value | 
+| ---------| --------- | ------------| --------------| 
+| --topic  |	None |	The name of the Kafka topic to inspect. (Required) |	None | 
+| --brokers	| -b |	A list of Kafka bootstrap servers to connect to. |	['localhost:9092'] | 
+| --num-messages | -n	The number of messages to sample for schema inference. A larger sample may be more accurate. | 	500| 
 
 ## Example
 To inspect the topic my_transactions on a remote cluster and sample 1000 messages, you would use:
