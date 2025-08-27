@@ -42,7 +42,7 @@ The script includes optional arguments to customize its behavior.
 | ---------| --------- | ------------| --------------| 
 | --topic  |	None |	The name of the Kafka topic to inspect. (Required) |	None | 
 | --brokers	| -b |	A list of Kafka bootstrap servers to connect to. |	['localhost:9092'] | 
-| --num-messages | -n	The number of messages to sample for schema inference. A larger sample may be more accurate. | 	500| 
+| --num-messages | -n | The number of messages to sample for schema inference. A larger sample may be more accurate. | 	500| 
 
 ## Example
 To inspect the topic my_transactions on a remote cluster and sample 1000 messages, you would use:
