@@ -1,5 +1,14 @@
 import argparse
 
+def inspect(topic, bootstrap_servers, num_messages=500): 
+    """
+	Connects to a topic and inspect its messages to infer the schema
+    Returns the inferred schema 
+    """
+    print(f"Inspecting topic:'{topic}'")
+    print(f"Connecting to Kafka brokers: {', '.join(bootstrap_servers)}")
+
+
 def main():
     parser = argparse.ArgumentParser(
 		description = """
@@ -8,11 +17,15 @@ def main():
 		and infers the schema.
 		"""
    )
+    
+	# Topic
     parser.add_argument("topic", help = "The Kafka topic to inspect.")
+    
+	# Optional arguments
     parser.add_argument(
 		"-b", "--brokers",
 		nargs = "+",
-		default=['localhost:9092'],
+		default = ['localhost:9092'],
 		help = "A list of Kafka bootstrap servers. Default: localhost:9092"        
 	)
     parser.add_argument(
@@ -23,7 +36,7 @@ def main():
 	)
     args = parser.parse_args()
     
-    print(args)
+    inspect(args.topic, args.brokers, args.num_messages)
 
 if __name__ == "__main__":
       main()
