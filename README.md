@@ -1,23 +1,25 @@
 
 A script to infer the json schema of a Kafka topic
 
-# How to Use
+# Instructions
 
-Prerequisites
-First, you'll need to install the required Python library.
+## Dependencies 
+
+Install required Python library:
 
 ```Bash
 pip install kafka-python
 ```
 
-# Running the Script
+## Running the Script
+
 You can run the script from your command line. The only required argument is the name of the Kafka topic you want to inspect.
 
 ```Bash
 python kafka_schema_inspector.py <topic_name>
 ```
 
-Example Output
+### Example Output
 The output will be a JSON object representing the inferred schema.
 
 ```JSON
@@ -34,7 +36,7 @@ The output will be a JSON object representing the inferred schema.
 }
 ```
 
-# Options
+# Arguments
 
 The script includes optional arguments to customize its behavior.
 
